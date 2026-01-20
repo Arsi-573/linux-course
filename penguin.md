@@ -39,6 +39,10 @@ https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
 
 https://terokarvinen.com/linux-palvelimet/
 
+https://www.debian.org/download
+
+https://www.virtualbox.org/wiki/Downloads
+
 ## End of h1
  
 
