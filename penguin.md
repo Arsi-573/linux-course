@@ -1,8 +1,8 @@
 # h0 - Getting started
 
-a) Right in the beginning I created the Github repository called linux-course.
-b) I then created a file named penguin.md in the linux-course repository.
-c) Final step was to publish the site to Laksu, which I did as insructed. 
+### a) Right in the beginning I created the Github repository called linux-course.
+### b) I then created a file named penguin.md in the linux-course repository.
+### c) Final step was to publish the site to Laksu, which I did as insructed. 
 
 ## End of h0
 
@@ -11,15 +11,15 @@ c) Final step was to publish the site to Laksu, which I did as insructed.
 My setup has Windows 11 Home (64 bit) with AMD Ryzen 5 5600X 6-Core Processor (3.70 GHz) and 16 Gb or RAM
 
 
-a) First task: Enable VT-X in BIOS
+### a) First task: Enable VT-X in BIOS
 - At first I had to enable VT-X in my computers BIOS, which was a real troble.
 - I then discovered the problem was, that the instruction was for Intel, and I'm using AMD with Asus motherboard. When I realized that VT-X is called SVM in this combination I have, it was a peace of cake to change the settings and then boot up my computer. 
 
-b) Second task: Download VirtualBox. 
+### b) Second task: Download VirtualBox. 
 - I went to https://www.virtualbox.org/wiki/Downloads and selected "windows host" to start download.
 - Then I proceeded with the installation setup and after selecting the correct location for the program, I finished the Install. 
 
-c) Third task: Download and install Debian.
+### c) Third task: Download and install Debian.
 - I went to https://www.debian.org/download and clicked on "debian-13.3.0-amd64-netinst.iso." to start the download.
 <img width="613" height="218" alt="image" src="https://github.com/user-attachments/assets/bb5263aa-dba1-4548-9d92-7f366824ef12" />
 
@@ -30,6 +30,13 @@ c) Third task: Download and install Debian.
 - I went trough the Live Install process as instructed on https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md (Phase 4 How to install Debian to the VM?).
 - After selecting right location, language and options the installation was ready.
 <img width="631" height="476" alt="Asennusten jälkeen " src="https://github.com/user-attachments/assets/5a383cb5-5333-4c9e-9084-0e8c7746ad25" />
+
+### d) Installing updates and installing Firewall
+- sudo apt-get update
+- sudo apt-get -y install ufw
+<img width="367" height="380" alt="Päivitykset ja palomuuri" src="https://github.com/user-attachments/assets/2d2e0743-a61d-4eb9-b25d-dc748675f800" />
+<img width="369" height="376" alt="päivitykset ja palomuuri 2" src="https://github.com/user-attachments/assets/9eb0521d-337c-4a43-b040-6dcefd4bc5d6" />
+
 
 
 ## h1 - Sources:
