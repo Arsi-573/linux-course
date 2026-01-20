@@ -8,6 +8,9 @@ c) Final step was to publish the site to Laksu, which I did as insructed.
 
 # h1 - Have to start somwhere
 
+My setup has Windows 11 Home (64 bit) with AMD Ryzen 5 5600X 6-Core Processor (3.70 GHz) and 16 Gb or RAM
+
+
 a) First task: Enable VT-X in BIOS
 - At first I had to enable VT-X in my computers BIOS, which was a real troble.
 - I then discovered the problem was, that the instruction was for Intel, and I'm using AMD with Asus motherboard. When I realized that VT-X is called SVM in this combination I have, it was a peace of cake to change the settings and then boot up my computer. 
