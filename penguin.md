@@ -31,7 +31,9 @@ c) Third task: Download and install Debian.
 
 # h1 - Sources:
 https://www.asus.com/fi/support/faq/1045141/
+
 https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-20082025.md
+
 https://terokarvinen.com/linux-palvelimet/
 
 ## End of h1
