@@ -25,6 +25,9 @@
 8) "sudo lshw -short -sanitize" - command
 <img width="387" height="325" alt="lshw" src="https://github.com/user-attachments/assets/1d6be014-0ba1-4816-9618-2456b61cc341" />
 
-
+## Sources
+https://terokarvinen.com/2009/command-line-basics-4/
+https://terokarvinen.com/2008/commands-for-admin-4/
+https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-27082925.md
  
 
