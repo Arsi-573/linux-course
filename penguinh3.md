@@ -48,9 +48,13 @@ Using the commands shown in the picture below, I created a new directory hattu.e
 
 <img width="679" height="289" alt="image" src="https://github.com/user-attachments/assets/d505c4e3-4b4d-4210-aa19-80801cd68e15" />
 
+
+
 Command on micro:
 
 <img width="451" height="265" alt="3  micro" src="https://github.com/user-attachments/assets/dc1ad04f-fdd0-4c6d-921a-79ed5d2d34e7" />
+
+
 
 Configuring the VirtualHost:
 
