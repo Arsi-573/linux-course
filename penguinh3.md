@@ -20,3 +20,23 @@ First assingment was to read twon articles about name based Virtual Hosts and su
 - The /etc/hosts file can be used for local testing without real DNS entries.
 
 As we can see, there's a lot in common between these two articles.
+
+### Testing the web server
+
+1) At first i installed apache2 using commands
+   sudo apt update
+   sudo apt install apache2
+I had already done this earlier, so then I later just confirmed that it's working by running the command
+   sudo systemctl status apache2
+I also opened the web browser and moves to http://localhost to verify, that apache2 is running and working well.
+
+<img width="1263" height="748" alt="1  localhost ja terminal" src="https://github.com/user-attachments/assets/5324a113-e78c-4854-9e28-30298342b5bd" />
+
+I then entered the command 
+    sudo tail -f /var/log/apache2/access.log 
+To see the log when downloading the site. The lines can be summarized:
+- Each line in the Apache access log represents one HTTP request.
+- The log shows who made the request, what was requested, and when it       happened.
+- It includes the HTTP method, status code, and response size.
+- Status code 200 means the request succeeded, and 404 means the resource was not found.
+- Access logs are used to monitor server activity and troubleshoot problems.
