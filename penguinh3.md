@@ -49,9 +49,11 @@ Using the commands shown in the picture below, I created a new directory hattu.e
 <img width="679" height="289" alt="image" src="https://github.com/user-attachments/assets/d505c4e3-4b4d-4210-aa19-80801cd68e15" />
 
 Command on micro:
+
 <img width="451" height="265" alt="3  micro" src="https://github.com/user-attachments/assets/dc1ad04f-fdd0-4c6d-921a-79ed5d2d34e7" />
 
 Configuring the VirtualHost:
+
 <img width="587" height="211" alt="4  VirtualHost" src="https://github.com/user-attachments/assets/682549c0-f5ad-4e70-94b3-641695f3af72" />
 
 After this I went back to browser and got error 403, so I gave the command 
