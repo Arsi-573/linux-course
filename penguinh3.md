@@ -1,7 +1,7 @@
 # h3 Hello Web Server
 
 First assingment was to read twon articles about name based Virtual Hosts and summarize both articles. 
-####1) Name based virtual host
+#### 1) Name based virtual host
    https://httpd.apache.org/docs/2.4/vhosts/name-based.html
 
 - Apache can host multiple websites on one IP address using name-based virtual hosts.
@@ -10,7 +10,7 @@ First assingment was to read twon articles about name based Virtual Hosts and su
 - If no matching virtual host is found, Apache uses the first defined virtual host as the default.
 - Each virtual host usually specifies at least ServerName and DocumentRoot.
 
-####2) Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address
+#### 2) Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address
    https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
 
 - Apache can host multiple websites on one IP address using name-based virtual hosts.
