@@ -88,3 +88,12 @@ The curl -I command can be summarized:
 
 <img width="868" height="628" alt="image" src="https://github.com/user-attachments/assets/5ef23b21-2063-42d0-8577-f78e3d4f706f" />
 
+
+
+### Sources
+
+https://httpd.apache.org/docs/2.4/vhosts/name-based.html
+
+https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
+
+Chat GPT (LLM 5.2) used to search errors and give me examples on code for HTML5
