@@ -69,3 +69,14 @@ Ja poistin myös root- tunnuksen käytöstä komennolla ```sudo usermod --lock r
 
 <img width="561" height="112" alt="image" src="https://github.com/user-attachments/assets/edea059a-f921-464e-b5e8-136ce515da3c" />
 
+
+
+### Lähteet 
+
+https://susannalehto.fi/2022/teoriasta-kaytantoon-pilvipalvelimen-avulla-h4/
+
+https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/
+
+https://terokarvinen.com/linux-palvelimet/
+
+https://upcloud.com/
