@@ -39,4 +39,4 @@ Seuraavat kohdat Network ja Optionals pidetään muuttamattomina ja siirrytään
 Seuraavan vaiheen tein oppitunnin aikana opettajan ohjeistuksella. 
 
 Ensimmäisenä haettiin SSH avainpari
-```ssh keygen```
+```ssh keygen``` - komennolla ja hakattiin Return- näppäintä niin kauan, että päästään taas komentosyötteeseen. Tämän jälkeen tarkastin hakemiston komennoilla ```ls``` ja ```ls -a```. Hakemistossa löytyy tämän jälkeen .ssh, joka avattiin komennolla ```cd .ssh``` 
