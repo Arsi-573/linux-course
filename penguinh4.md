@@ -69,6 +69,14 @@ Ja poistin myös root- tunnuksen käytöstä komennolla ```sudo usermod --lock r
 
 <img width="561" height="112" alt="image" src="https://github.com/user-attachments/assets/edea059a-f921-464e-b5e8-136ce515da3c" />
 
+#### C) Testisivun korvaus.
+Seuraavaksi yhdistin itseni takaisin virtuaalipalvelimeeni komennolla ```ssh juho@94.237.118.156``` ja tämän jälkeen asensin apache2 komennoilla ```sudo apt update``` ja ```sudo apt install apache2```.  Tämän jälkeen tarkistin selaimesta, että apache2- oletussivu näkyy osoitteessa http://94.237.118.156, kuten näkyikin. Siirryin siis takaisin terminaaliin ja siirryin muokkaamaan html- tiedostoa komennolla ```sudo micro /var/www/html/index.html```. Poistin sivun sisällön, painamalla pohjaan Ctrl + K, joka tyhjenti rivit ylhäältä alas pikaisesti ja kirjoitin tilalle oman sisältöni lainaten ideoita tekoälyltä kysymyksellä: "Anna ehdotus räväkästä sivusta, joka ei sisällä muuta kuin tekstiä ja sitäkin vain hyvin vähän.". Varsinaisen tekstin keksin itse sivuston sisällöksi. 
+
+<img width="815" height="237" alt="image" src="https://github.com/user-attachments/assets/264f91d7-1e1e-4472-8e6c-fe085ec4c398" />
+
+Lopputuloksen tarkistin vielä siirymällä Windowsin Chrome- selaimeen ja syöttämällä sivuni selaimeen. Lopputulos on toimiva.
+
+<img width="762" height="356" alt="image" src="https://github.com/user-attachments/assets/5b35a499-5d3a-47cf-9074-385658b303dd" />
 
 
 ### Lähteet 
@@ -80,3 +88,5 @@ https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-exa
 https://terokarvinen.com/linux-palvelimet/
 
 https://upcloud.com/
+
+ChatGPT LLM 5.2 käytetty oman sivun sisällön luontiin. 
