@@ -53,7 +53,7 @@ IP-osoitteen kopioinnin jälkeen syötin komennoksi ```ssh root@94.237.118.156``
 
 <img width="874" height="322" alt="image" src="https://github.com/user-attachments/assets/104d8965-5e6b-459b-bb34-873baf6a9a18" />
 
-Tämän jälkeen loin käyttäjän juho, komennolla ```sudo adduser juho```` ja täytin nimen, sekä salasanan pyydettäessä, ja jätin muut tyhjäksi. Loppuun vastaukseksi ```y``` ja Return. 
+Tämän jälkeen loin käyttäjän juho, komennolla ```sudo adduser juho``` ja täytin nimen, sekä salasanan pyydettäessä, ja jätin muut tyhjäksi. Loppuun vastaukseksi ```y``` ja Return. 
 
 <img width="698" height="300" alt="image" src="https://github.com/user-attachments/assets/224c5078-a391-4233-bba4-2e00353c01ec" />
 
