@@ -55,5 +55,32 @@ Kuten kuvassa näkyy, oman domainini ohjaus vie oikeaan IP-osoitteeseen.
 - Tekee saman DNS-kyselyn, kuin aikaisempi komento, mutta näyttää koko nimipalvelimen palauttaman DNS-paketin
 - Sopii laajempaan vianmääritykseen
 
+Esim. oman domainini osalta juuri ```ANSWER SECTION:``` - näyttää oleliillisimmat tiedot, joista ```A``` merkaa IP-osoitteen mallia (IPv4), ```300``` merkkaa TTL- aikaa sekunteina (5 minuuttia) ja ```94.237.118.156``` kertoo sivuston IP-osoitteen. 
+
 <img width="618" height="363" alt="image" src="https://github.com/user-attachments/assets/889e0e94-5bea-45d6-bd1c-3a88320e6f40" />
+
+Kokeilin seuraavaksi komentoja omille alidomaineille. 
+
+<img width="415" height="37" alt="image" src="https://github.com/user-attachments/assets/49ff7bf4-929d-4f60-abb4-ac5ad2da547f" />
+
+<img width="616" height="552" alt="image" src="https://github.com/user-attachments/assets/9abdf14b-69da-4a0f-a315-4302d7f5d17c" />
+
+Host- komento ei palauta alidomainille sähköpostin ohjauksia, kuten itse päädomain juhoarveli.com. Dig- komento pysyi miltei muuttumattomana, mutta kuten haun tulos osoittaa, on cv.juhoarveli.com oma DNS-tietueensa, eikä esim. alisivu kuten esim. juhoarveli.com/cv. 
+
+Kokeilin samoja komentoja paikallisen pienpanimon sivuille olarinpanimo.fi.
+
+```host olarinpanimo.fi``` kertoo sivuston IP-osoitteen, sekä sähköpostin välitykseen käytettävät tietueet. Olarin Panimo näemmä käyttää hostingservice.fi välittäjänään. 
+
+```dig olarinpanimo.fi``` taas kertoo, että heillä on käytössään IPv4- osoite (A), IP-osoite 185.220.77.11 ja TTL 1200 sekuntia (20 minuuttia). 
+
+<img width="630" height="432" alt="image" src="https://github.com/user-attachments/assets/e1cd1a9b-a653-4aec-bbd5-aaea50ae8aab" />
+
+Kokeilin samoja komentoja myös kansainvälisesti tunnetumman yrityksen domainille pilsnerurquell.com.
+
+```host pilsnerurquell.com``` näyttää jälleen sivuston IP-osoitteen ja sähköpostin välitykseen käytettävät tietueet.
+
+```dig pilsnerurquell.com``` taas näyttää meille, että kyseessä on tälläkin kertaa IPv4- osoite (93.185.98.138) ja sivuston TTL on 900 sekuntia (15 minuuttia)
+
+<img width="646" height="412" alt="image" src="https://github.com/user-attachments/assets/17e371f5-18d7-455f-a180-f048c02c8612" />
+
 
