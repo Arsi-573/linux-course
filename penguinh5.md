@@ -84,3 +84,18 @@ Kokeilin samoja komentoja myös kansainvälisesti tunnetumman yrityksen domainil
 <img width="646" height="412" alt="image" src="https://github.com/user-attachments/assets/17e371f5-18d7-455f-a180-f048c02c8612" />
 
 
+### Lähteet 
+
+https://terokarvinen.com/linux-palvelimet/
+
+https://www.cloudns.net/blog/linux-host-command-troubleshot-dns/
+
+https://linuxize.com/post/how-to-use-dig-command-to-query-dns-in-linux/
+
+ChatGPT LLM 5.2 kysytty selityksiä lyhenteille. 
+
+https://olarinpanimo.fi/
+
+https://www.pilsnerurquell.com/
+
+
