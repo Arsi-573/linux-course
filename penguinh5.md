@@ -1,4 +1,4 @@
-# h4 Nimekäs
+# h5 Nimekäs
 
 #### A) Nimi
 Oppitunnilla ja oppimateriaaleissa suositeltu NameCheap valikoitui omaksikin palvelutarjoajaksi. Ajattelin, että vuokraan domainin itselleni aluksi nyt yhdeksi vuodeksi ja katson sen jälkeen, käytänkö kyseistä palvelua aktiivisesti esim. toisenkin opiskelijan tavoin portfolion ylläpitoon. 
