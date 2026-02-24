@@ -51,3 +51,13 @@ Seuraavaksi oli tarkoitus tarkastaa sivuston TLS (Transport Layer Security). Sii
 
 <img width="1100" height="628" alt="image" src="https://github.com/user-attachments/assets/358b3f5d-256b-4f83-a84c-64950d615599" />
 
+
+### Lähteet 
+
+https://terokarvinen.com/linux-palvelimet/
+
+https://letsencrypt.org/how-it-works/
+
+https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html#configexample
+
+https://www.ssllabs.com/ssltest/
