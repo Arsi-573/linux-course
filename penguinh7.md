@@ -10,6 +10,5 @@ Aloitin luomalla tiedoston "Halojata Maailma" microlla komennolla ´´´micro ha
 #!/bin/bash
 
 # Tervehdys
-echo "Halojata Muailma!"
-´´´
+echo "Halojata Muailma!"´´´
 
