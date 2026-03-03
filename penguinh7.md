@@ -14,3 +14,4 @@ echo "Halojata Muailma!"
 
 <img width="342" height="131" alt="image" src="https://github.com/user-attachments/assets/d66a340f-a840-460c-99f5-d80aa7e70a5f" />
 
+
