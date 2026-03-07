@@ -150,3 +150,68 @@ Ja http://10.0.2.15/~petero/
 
 <img width="1615" height="267" alt="image" src="https://github.com/user-attachments/assets/28841fe9-0441-42c3-b90c-2f8e2e0a6f19" />
 
+Sivut siis toimivat ja on tunnistettavaksi skriptini luomiksi, koska skriptissä oli erikseen määritetty, että sivun Heading 1 tervehtii käyttäjää omalla nimellään. 
+
+Seuraavaksi Peterille tuli luoda PHP- sivu, joka ottaa yhteyttä tietokantaan ja näkyy osoitteessa peterdev.example.org. Aloitin tekemällä tarvittavat asennukset, jotta saan tietokannan ja ajurin, joka yhdistää sen PHP:hen. Etsin ensin avoimen lähdekoodin tietokantoja hakusanalla "avoimen lähdekoodin tietokanta" Googlesta ja sain useita eri vaihtoehtoja, joista päädyin itse MariaDB:hen. 
+
+Asensin MariaDB- tietokannan ja PHP-ajurin ajamalla komennot
+```
+sudo apt update
+sudo apt install mariadb-server php-mysql -y
+```
+
+<img width="1615" height="473" alt="image" src="https://github.com/user-attachments/assets/ad46f716-4bf3-4cdc-a188-78a5e1ca4d7f" />
+
+Seuraavaksi tein Peterille oman hiekkalaatikon komennolla ```sudo mariadb```. Kun olin MariaDB monitorissa, annoin komennot:
+```
+CREATE DATABASE peter_db;
+CREATE USER 'peter_admin'@'localhost' IDENTIFIED BY 'PeterPass123';
+GRANT ALL PRIVILEGES ON peter_db.* TO 'peter_admin'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+```
+<img width="1665" height="481" alt="image" src="https://github.com/user-attachments/assets/04feceff-2393-48de-9d97-81d76ad99cf6" />
+
+Kuten kuvassa näkyy, tein aluksi pienen kirjoitusvirheen kirjoittaessani "PRIVILAGES" korjasin kirjoitusmuodon oikein "PRIVILEGES" ja tämän jälkeen tietokanta ja käyttäjä peter_admin@localhost oli luotu. 
+
+Tein hakemiston sivua varten komennolla ```sudo mkdir -p /var/www/peterdev``` ja avasin Micron asetustiedoston luontia varten ```sudo micro /etc/apache2/sites-available/peterdev.conf```. Microssa syötin kuvan mukaisen syötteen:
+
+<img width="373" height="155" alt="image" src="https://github.com/user-attachments/assets/614921d9-b293-4649-bfba-ef95017c8b0e" />
+
+Otin sivun käyttöön ```sudo a2ensite peterdev.conf``` ja käynnistin apachen uudelleen ```sudo systemctl restart apache2```. Seuraavaksi minun tuli saada osoite peterdev.example.org vastaamaan localhost- osoitteena, joten avasin komennon ```sudo micro /etc/hosts``` Syötin tiedoston loppuun ```127.0.0.1 peterdev.example.org```, jolloin DNS ei yritä hakea sitä enää Internetistä, vaan tunnistaa sivun ns. paikalliseksi Host- osoitteeksi. 
+
+<img width="585" height="178" alt="image" src="https://github.com/user-attachments/assets/dd371478-58aa-4dff-a749-48415a3d2528" />
+
+Seuraavaksi loin Peterin PHP-sivun ja aloitin luomalla tiedoston Microlla ```sudo micro /var/www/peterdev/index.php```. Microssa syötin sivun sisällön, tallensin ja suljin tiedoston. 
+
+<img width="1032" height="185" alt="image" src="https://github.com/user-attachments/assets/131aa27a-859a-441c-b3ef-e029cbc6e78e" />
+
+Lopuksi kokeilin yhteyden komennolla ```curl -L http://peterdev.example.org```
+
+<img width="632" height="45" alt="image" src="https://github.com/user-attachments/assets/84dc4639-8914-4b06-8fc6-fd0d5e6bc8e2" />
+
+#### IoT12Tools- ohjelmistopaketti.
+Seuraavassa vaiheessa tehtävää oli luoda "metapaketti", joka ei itselleni ole niin tuttu aihe, joten ajattelin, että sen sijaan toteutetaan tämäkin vaihe tehtävästä bash skriptinä!
+
+Aloitin luomalla skriptin nimellä iot12tools.sh ja luomalla skriptin Microssa.
+
+<img width="792" height="188" alt="image" src="https://github.com/user-attachments/assets/daedd6bd-d897-4100-83c8-3d62418b95b3" />
+
+Skripti hakee automaattisesti ensin kaikki päivitykset, ja sen jälkeen asentaa halutut ohjelmat Adruino IDE, Gedit, Curl ja Python3. ```-y``` hoitaa asennusten hyväksynnän suoraan skriptissä, joten kun komennon ajaa terminalissa ei käyttäjän tarvitse itse enää hyväksyä jokaista sennusta erikseen. 
+
+Annoin ohjelmalle suotitusoikeudet ```sudo chmod +x iot12tools.sh``` ja testasin toimivuuden ```./iot12tools.sh```. 
+
+<img width="1482" height="695" alt="image" src="https://github.com/user-attachments/assets/ea6f3271-adb3-46fa-8cdb-2db33bc148fd" />
+
+<img width="680" height="47" alt="image" src="https://github.com/user-attachments/assets/c6442e78-a414-4961-abd8-2517baf77066" />
+
+Lopuksi siirtin skriptin komentokansioon ja annoin oikeidet suorittaa komento kyseisessä komentokansiossa.
+```
+sudo cp ~/iot12tools.sh /usr/local/bin/iot12tools.sh
+sudo chmod +x /usr/local/bin/iot12tools.sh
+```
+
+#### Python3 tiedosto Jalmarin kotihakemistoon.
+Aloitin luomalla Jalmarille tiedoston heimaailma.py Microlla. 
+
+
