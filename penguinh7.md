@@ -238,6 +238,8 @@ https://emojicombos.com/pepe-text-art
 
 https://www.debian.org/download
 
+https://terokarvinen.com/2016/arvioitava-laboratorioharjoitus-linux-palvelimet-ict4tn021-1-uusi-ops-alkusyksylla-2016/
+
 Google.com hakusana "avoimen lähdekoodin tietokanta"
 
 Google Gemini 3. LLM käytetty skriptien kirjoittamiseen. 
