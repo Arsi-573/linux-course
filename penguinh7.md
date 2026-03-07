@@ -212,6 +212,30 @@ sudo chmod +x /usr/local/bin/iot12tools.sh
 ```
 
 #### Python3 tiedosto Jalmarin kotihakemistoon.
-Aloitin luomalla Jalmarille tiedoston heimaailma.py Microlla. 
+Aloitin luomalla Jalmarille tiedoston heimaailma.py Microlla. Kirjoitin sisällön, tallensin ja suljin Micron. 
+
+<img width="568" height="72" alt="image" src="https://github.com/user-attachments/assets/45518215-d5a0-4fea-9f4f-ae8171c967e0" />
+
+Seuraavaksi siirsin tiedoston Jalmarin kotihakemistoon komennolla ```sudo mv heimaailma.py /home/jalmaria/``` annoin oikeudet Jalmarille ```sudo chown jalmaria:jalmaria /home/jalmaria/heimaailma.py``` ja testasin komennon Jalmarin käyttäjätunnuksella käyttämällä komentoa ```sudo -u jalmaria python3 /home/jalmaria/heimaailma.py```. Välissä sattui muutama huolimattomuusvirhe, kuten yksi ylimääräinen merkki itse skriptin alussa rivillä 1, ja toisena kun yritin avata tiedostoa komennolla ```micro heimaailma.py``` siirrettyäni sen jo Jalmarin kotihakemistoon. Nämä virheet on nähtävissä kuvissa, mutta en tämän tarkemmin korjaustoimenpiteitä dokumentoinut, koska kyseessä oli varsin pienet kömmähdykset. 
+
+sudo -u jalmaria python3 /home/jalmaria/heimaailma.py
+
+#### Lopuksi: Resurssit
+Lopuksi oli aika vielä tarkistaa resurssien käyttö. Tapoin seurannan komennolla ```sudo pkill vmstat``` ja tulostin reportin ```cat ~/resurssit.txt```. 
+
+<img width="687" height="820" alt="image" src="https://github.com/user-attachments/assets/a1da41e5-ee82-40ce-b260-5e91605423a6" />
+
+<img width="680" height="672" alt="image" src="https://github.com/user-attachments/assets/ddc7973c-98c6-4310-a52c-b71df09bc92b" />
 
 
+### Lähteet 
+
+https://terokarvinen.com/linux-palvelimet/
+
+https://emojicombos.com/pepe-text-art
+
+https://www.debian.org/download
+
+Google.com hakusana "avoimen lähdekoodin tietokanta"
+
+Google Gemini 3. LLM käytetty skriptien kirjoittamiseen. 
