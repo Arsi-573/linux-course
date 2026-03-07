@@ -57,4 +57,18 @@ Kun kokeilu oli valmis, kopioin skriptin ohjelmistohakemistoon ```sudo cp haloja
 <img width="627" height="184" alt="image" src="https://github.com/user-attachments/assets/af7b7b3b-8cad-4514-9c7a-69c1a241c613" />
 
 #### C) Itse keksimä komento
+Ajattelin, että terminaali kaipaa komennon, joka eroaa hieman muista, joten kirjoitin komennon ```pepe```.
 
+Koska halusin komennon tulostavan "kuvan" ASCII- muodossa, hain internetistä hakusanalla "ASCII pepe" ja löysin komentooni sopivan ASCII-art pohjan, kopioin sen ja avasin terminalissa micron komennolla ```micro pepe```. Microssa kirjoitin ensimmäiselle riville ```#!/bin/bash``` ja toiselle riville ```cat << 'EOF'```. EOF (End-of-File) pitää huolen, että bash antaa tekstin juuri siinä muodossa kun se on syötetty microon. 
+
+<img width="517" height="500" alt="image" src="https://github.com/user-attachments/assets/28326b4d-3a66-4518-a8bb-4ed1d8c58feb" />
+
+Lopuksi kirjoitin loppuun uudestaan ```EOF``` tallensin ja suljin micron ja siirryin antamaan oikeudet, ja siirtämään tiedoston komentohakemistoon. 
+
+<img width="495" height="555" alt="image" src="https://github.com/user-attachments/assets/b134e385-63a3-49e6-92bb-3b50435c2515" />
+
+Lopuksi vielä kokeilin komentoa kirjoittamalla ```pepe```. 
+
+<img width="455" height="463" alt="image" src="https://github.com/user-attachments/assets/1acc5d56-c49c-4eb2-b5e5-4cab2feb4f4c" />
+
+#### D) Laboratorioharjoitus
