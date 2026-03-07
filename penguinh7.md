@@ -72,3 +72,28 @@ Lopuksi vielä kokeilin komentoa kirjoittamalla ```pepe```.
 <img width="455" height="463" alt="image" src="https://github.com/user-attachments/assets/1acc5d56-c49c-4eb2-b5e5-4cab2feb4f4c" />
 
 #### D) Laboratorioharjoitus
+Valitsin tehtäväksi IoT12 Oy:n ympäristön perustamisen:
+
+https://terokarvinen.com/2016/arvioitava-laboratorioharjoitus-linux-palvelimet-ict4tn021-1-uusi-ops-alkusyksylla-2016/
+
+Aloitin luomalla uuden virtuaalikoneen tätä harjoitusta varten nimeämällä sen Virtuaboxissa IoT12oy- nimellä. 
+
+<img width="915" height="673" alt="image" src="https://github.com/user-attachments/assets/e6ccdd4d-64b8-48e9-9979-5f032d46a757" />
+
+Ensimmäisenä tehtävässä tuli varmistaa, että eri resurssien käyttö on tilastoitu koko harjoituksen ajalta. Ajoin tätä varten heti terminalin aikaistuani komennon ```vmstat 10 > resurssit.txt &``` Tällä komennolla resursseista otetaan näyte 10 sekunnin välein ja ne viedään tiedostoon resurssit.txt. ```&``` merkki lopussa pitää ohjelman aktiivisena taustalla, jotta voin jatkaa harjoituksen tekemistä. 
+
+Seuraavaksi asensin palomuurin komennoilla ```sudo apt update``` ja ```sudo apt install ufw```. Sallin palomuurissa SSH- yhteyden ottamisen koneelle komennolla ```sudo ufw allow ssh``` ja kytkin palomuurin aktivoitumaan automaattisesti koneen käynnistyessä ```sudo ufw enable```. Lopuksi tarkistin, että portti 22 on muurissa auki komennolla ``` sudo ufw status verbose```.
+
+<img width="610" height="276" alt="image" src="https://github.com/user-attachments/assets/17064c7d-825b-4098-aa65-c859c7a93923" />
+
+Seuraavaksi asensin SSH:n komennolla ```sudo aot install ssh``` ja siirryin etähallintaohjelmiston asennukseen. kirjoitin komennoksi tehtävän ohjeistuksessa olleen ```wget http://terokarvinen.com/qrs/terorep/pool/main/t/terorep/terorep_0.0.3_all.deb```, mutta valitettavasti tulos tästä oli 404, not found. 
+
+<img width="933" height="181" alt="image" src="https://github.com/user-attachments/assets/5ab4c74e-dd86-47f4-b4bb-274c025f11f1" />
+
+Koska sivua ei enää ole, käyn asian nyt teoriapohjaisena läpi:
+Etähallintaohjelmiston asennus:
+```
+sudo dpkg -i terorep_0.0.3_all.deb
+sudo apt-get update
+sudo apt-get -y install terowatch ssh
+```
