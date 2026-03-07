@@ -100,6 +100,7 @@ sudo apt-get -y install terowatch ssh
 
 Näillä komennoilla etähallinta ohjelma olisi asennettuna ja toiminnassa. 
 
+#### Käyttäjien luonti
 Seuraavaksi vaiheessa oli käyttäjien luonti. Kaikilla tulee olla esimerkkisivu ja kaikkien käyttäjätunnukset ja salasanat tulee listata lab.txt. Kyseinen tiedosto tulee suojata niin, ettei sitä voi muut lukea. Alla listaus käyttäjistä:
 - Maija Mehilälinen
 - Peter Ö
@@ -152,6 +153,7 @@ Ja http://10.0.2.15/~petero/
 
 Sivut siis toimivat ja on tunnistettavaksi skriptini luomiksi, koska skriptissä oli erikseen määritetty, että sivun Heading 1 tervehtii käyttäjää omalla nimellään. 
 
+#### Peterin PHP-sivu
 Seuraavaksi Peterille tuli luoda PHP- sivu, joka ottaa yhteyttä tietokantaan ja näkyy osoitteessa peterdev.example.org. Aloitin tekemällä tarvittavat asennukset, jotta saan tietokannan ja ajurin, joka yhdistää sen PHP:hen. Etsin ensin avoimen lähdekoodin tietokantoja hakusanalla "avoimen lähdekoodin tietokanta" Googlesta ja sain useita eri vaihtoehtoja, joista päädyin itse MariaDB:hen. 
 
 Asensin MariaDB- tietokannan ja PHP-ajurin ajamalla komennot
