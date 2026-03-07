@@ -97,3 +97,56 @@ sudo dpkg -i terorep_0.0.3_all.deb
 sudo apt-get update
 sudo apt-get -y install terowatch ssh
 ```
+
+Näillä komennoilla etähallinta ohjelma olisi asennettuna ja toiminnassa. 
+
+Seuraavaksi vaiheessa oli käyttäjien luonti. Kaikilla tulee olla esimerkkisivu ja kaikkien käyttäjätunnukset ja salasanat tulee listata lab.txt. Kyseinen tiedosto tulee suojata niin, ettei sitä voi muut lukea. Alla listaus käyttäjistä:
+- Maija Mehilälinen
+- Peter Ö
+- Oskar Jäärä
+- John Do
+- Verner Vrij
+- Mikko Möttönen
+- Jalmari Ähkä
+- Håkan Swarz
+- Maija Maitoparta
+
+Aloitin asentamalla apache2:n ja PHP-ohjelmointikielen, sekä ```libapache2-mod-php``` -moduulin, joka yhdistää Apachen ja PHP:n toisiinsa. 
+
+<img width="777" height="137" alt="image" src="https://github.com/user-attachments/assets/2b7e81c5-2c9b-4696-a864-19341f2cc529" />
+
+seuraavaksi aktivoin ```userdir``` -moduulin komennolla ```sudo a2enmod userdir``` ja käynnistin apaschen uudestaan ```sudo systemctl restart apache2```. Asensin Micron ```sudo apt install micro -y``` ja avasin ```sudo micro /etc/apache2/mods-available/php*.conf``` -tiedoston, josta kävin poistamssa rivin ```php_admin_flag engine Off```. Debian kieltää oletusasetuksena PHP:n suorituksen käyttäjien kotihakemistoissa, joten asennustiedostoa on muokattu tästä syystä. 
+
+<img width="913" height="578" alt="image" src="https://github.com/user-attachments/assets/f860a9e7-8520-4b6e-bc4e-b0a08f567761" />
+
+Lopuksi käynnistin apachen uudestaan ```sudo systemctl restart apache2```. Koska käyttäjälistaus on pitkä ja yksittäisten käyttäjien luonti on todella työlästä, aikaa vievää ja puuduttavaa, luodaan skripti, joka tekee käyttäjätunnukset, generoi vahvat salasanat, luo PHP-sivun ja asentaa oikeudet Apachea varten. 
+
+Luodaan siis skripti Microlla ```micro asenna_kayttajat```. Kysyin tähän apua tekoälyltä skriptin luomiseen syötteellä "Tee minulle bash skripti, jossa luodaan käyttäj(koko nimi ja nimeen viittaava käyttäjätunnus) + salasana + luodaan jokaiselle käyttäjälle oma PHP-sivu niin että Apache2 voi lukea sivun ja lopuksi tallennetaan käyttäjän koko nimi, käyttäjätunnus ja salasana lab.txt- tiedostoon, johon oikeudet on vain minulla". Sain vastauksena valmiin skriptin, jonka syltin omilla muutoksillani Microon.
+
+<img width="1158" height="750" alt="image" src="https://github.com/user-attachments/assets/27eef5a1-6741-40ad-a550-e271d126f5a5" />
+
+Annoin ohjelmalle oikeudet ```chmod +x asenna_kayttajat.sh``` ja kokeilin ajaa ohjelman ```./asenna_kayttajat.sh```, syötin salasanan ja sain kuvan mukaisen virheen, joka viittasi, että jonkin käyttäjätunnuksen kohdalta puuttui ```:```.
+
+<img width="785" height="187" alt="image" src="https://github.com/user-attachments/assets/25593b97-9ad9-4ba5-8db7-57ff27888db5" />
+
+Avasin skriptin uudelleen ```micro asenna_kayttajat.sh``` ja huomasin, että olin kirjoittanut Verner Vrijn kohdalla ```Verner Vrij_vernerv```, joten korjasin tämän vaihtamalla ```_``` tilalle ```:```. 
+
+<img width="496" height="317" alt="image" src="https://github.com/user-attachments/assets/e9af5035-4424-407b-9079-c5d9ff09572f" />
+
+Tallensin ja suljin skriptin Microssa ja tämän jälkeen poistin vanhan ```lab.txt``` -tiedoston, jotta vältytään tuplamerkinnöiltä komennolla ```rm ~/lab.txt```. Tämän jälkeen ajoin skriptin uudelleen (joka myös luo automaattisesti tiedoston uudelleen) ```./asenna_kayttajat.sh```.
+
+<img width="671" height="266" alt="image" src="https://github.com/user-attachments/assets/5fa217fa-bf14-4958-83d3-bb420c5fc6c5" />
+
+Koska muut käyttäjät oli jo aiemmin luotu, Terminaali ilmoittaa, että nämä käyttäjät ovat jo olemassa. Skripti kuitenkin generoi käyttäjille uudet salasanat ja tallensi uudet tiedot lab.txt- tiedostoon. Verneri puuttuu listasta, koska hänen käyttäjäänsä ei luotu kirjoitusvirheen vuoksi aiemmalla kerralla ohjelmaa suorittaessa, mutta nyt sekin on luotu. Tarkistin vielä käyttäjälistauksen ajamalla komennon ```cat ~/lab.txt```.
+
+<img width="982" height="267" alt="image" src="https://github.com/user-attachments/assets/4d487ca1-863d-4583-b538-69f30445e42e" />
+
+Testasin vielä seuraavaksi parin eri käyttäjän PHP-sivujen luonnin kokeilemalla selaimella. Ajoin ensin terminalissa komennon ```hostname -I```, jotta sana palvelimen IP-osoitteen ylös, joka on 10.0.2.15. Tämän jälkeen kokeilin selaimessa Maija Mehiläisen ja Peter Ön sivut syöttämällä selaimen osoitinkenttään:
+http://10.0.2.15/~maijam/
+
+<img width="1607" height="267" alt="image" src="https://github.com/user-attachments/assets/b6f33ced-799e-4fab-b804-50c80881b645" />
+
+Ja http://10.0.2.15/~petero/
+
+<img width="1615" height="267" alt="image" src="https://github.com/user-attachments/assets/28841fe9-0441-42c3-b90c-2f8e2e0a6f19" />
+
